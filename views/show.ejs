@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	hi im index <br>
+
+	<ul>
+		<h4>Fruits Show Page</h4>
+			<li> <%= fruits[index].name + ' - ' + fruits[index].color %> </li>
+			<% if(fruits[index].readyToEat === true){ %>
+				<li>I'm hungry, here's some fruit</li> 
+			<% }else { %>
+				<li>No, fruit is not ready, go away</li> 
+			<% } %>
+	</ul>
+</body>
+</html>

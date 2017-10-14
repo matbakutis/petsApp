@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pets</title>
+</head>
+<body>
+	<h1>Pets!</h1>
+		<% for(let i = 0; i < pets.length; i++){ %>
+		<ul>
+			<li> <%= pets[i].name %> </li>
+			<li> <%= pets[i].type %> </li>
+			<li> <%= pets[i].breed %> </li>
+			<li> <%= pets[i].color %> </li>
+			<li> <%= pets[i].age %> </li>
+			<form action="pets/delete/<%= pets[i]._id %>?_method=DELETE" method="post">
+				<button type="submit">Delete</button>
+			</form>
+			<a href="/pets/<%= pets[i]._id %>/edit">Edit</a>
+		</ul>
+		<% } %>
+	<a href="/pets/new">Add a New Pet!</a>
+</body>
+</html>
