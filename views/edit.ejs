@@ -4,14 +4,12 @@
 	<title></title>
 </head>
 <body>
-<form action="/fruits/<%= fruits._id %>/edit?_method=PUT" method="POST">
-	Name: <input type="text" name="name" value="<%= fruits.name %>"><br><br>
-	Color: <input type="text" name="color" value="<%= fruits.color %>"><br><br>
-	Ready to Eat?: <input type="checkbox" name="readyToEat"
-	<% if (fruits.readyToEat === true){ %>
-		checked="on"
-	<% } %>
-	><br><br>
+<form action="/pets/edit/<%= pet._id %>?_method=PUT" method="POST">
+	Name: <input type="text" name="name" value="<%= pet.name %>"><br><br>
+	Type: <input type="text" name="type" value="<%= pet.type %>"><br><br>
+	Breed: <input type="text" name="breed" value="<%= pet.breed %>"><br><br>
+	Color: <input type="text" name="color" value="<%= pet.color %>"><br><br>
+	Age: <input type="number" name="age" value="<%= pet.age %>"><br><br>
 	<button type="submit">Submit</button>
 </form>
 </body>
