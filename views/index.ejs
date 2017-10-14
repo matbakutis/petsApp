@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Pets</title>
+	<% include ../partials/head %>
 </head>
 <body>
 	<h1>Pets!</h1>
 		<% for(let i = 0; i < pets.length; i++){ %>
-		<ul>
-			<li> <%= pets[i].name %> </li>
-			<li> <%= pets[i].type %> </li>
-			<li> <%= pets[i].breed %> </li>
-			<li> <%= pets[i].color %> </li>
-			<li> <%= pets[i].age %> </li>
+			<p>Name: <%= pets[i].name %></p>
+			<p>Type: <%= pets[i].type %></p>
+			<p>Breed: <%= pets[i].breed %></p>
+			<p>Color: <%= pets[i].color %></p>
+			<p>Age: <%= pets[i].age %></p>
+			<a href="pets/show/<%= pets[i]._id %>">Show More</a>
+			<a href="pets/edit/<%= pets[i]._id %>/">Edit</a>
 			<form action="pets/delete/<%= pets[i]._id %>?_method=DELETE" method="post">
 				<button type="submit">Delete</button>
 			</form>
-			<a href="pets/edit/<%= pets[i]._id %>/">Edit</a>
-		</ul>
 		<% } %>
 	<a href="pets/new">Add a New Pet!</a>
 </body>

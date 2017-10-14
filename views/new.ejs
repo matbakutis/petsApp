@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add a Pet!</title>
+	<% include ../partials/head %>
 </head>
 <body>
 	<h1>Add a Pet!</h1>
 		<form action="/pets/create" method="post">
-			Name: <input type="text" name="name"><br><br>
-			Type: <input type="text" name="type"><br><br>
-			Breed: <input type="text" name="breed"><br><br>
-			Color: <input type="text" name="color"><br><br>
-			Age: <input type="number" name="age"><br><br>
+			Name: <input type="text" name="name"><br>
+			Type: <input type="text" name="type"><br>
+			Breed: <input type="text" name="breed"><br>
+			Color: <input type="text" name="color"><br>
+			Age: <input type="number" name="age"><br>
 			<button type="submit">Submit</button>
 		</form>
 </body>

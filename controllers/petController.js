@@ -56,6 +56,16 @@ router.put('/edit/:id', (req, res)=>{
 	});
 });
 
+router.get('/show/:id', (req, res)=>{
+	petDB.findById(req.params.id, (err, pet)=>{
+		if (err) {
+			res.send('could not find pet');
+		}else {
+			res.render('show', {pet: pet})
+		};
+	});
+});
+
 
 
 
