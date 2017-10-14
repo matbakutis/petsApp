@@ -30,8 +30,9 @@ router.delete('/delete/:id', (req, res)=>{
 	petDB.findByIdAndRemove(req.params.id, (err, deleted)=>{
 		if (err) {
 			res.send('there was an error while deleting');
-		}
-		console.log(deleted);
+		}else{
+			res.redirect('/pets');
+		};
 	});
 });
 
